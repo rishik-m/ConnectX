@@ -6,17 +6,23 @@ import {
   Route
 } from "react-router-dom";
 import Header from './components/Header';
+import styled from 'styled-components';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
     <div className="app">
         <Router>
           <>
-            <Switch>
-              <Route path="/" exact>
-                <Header />
-              </Route>
-            </Switch>
+            <Header />
+            <AppStruct>
+              <Sidebar />
+              <Switch>
+                <Route path="/" exact>
+                  {/* MESSAGE */}
+                </Route>
+              </Switch>
+            </AppStruct>
           </>
         </Router>
     </div>
@@ -24,3 +30,8 @@ function App() {
 }
 
 export default App;
+
+const AppStruct = styled.div`
+  display: flex;
+  height: 100vh;
+`;

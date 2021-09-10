@@ -3,7 +3,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow: scroll;
   --ap-color: #3f0f40;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

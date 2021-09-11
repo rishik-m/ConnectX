@@ -67,9 +67,10 @@ const SidebarSection = styled.div`
    flex: 0.3;
    background-color: var(--ap-color);
    color: white;
-   margin-top: 60px;
-   border-top: 1px solid #49274b;
+   margin-top: 59px;
+   border-top: 2px solid #49274b;
    max-width: 260px;
+   overflow: auto;
 
    > hr {
        border: 1px solid #49274b;

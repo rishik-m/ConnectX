@@ -2,21 +2,35 @@ import React from 'react'
 import styled from 'styled-components'
 import StarOutlineOutlinedIcon from '@material-ui/icons/StarOutlineOutlined';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import { useSelector } from 'react-redux';
+import { selectRoomId } from '../features/appSlice';
+import ChatInput from './ChatInput';
 
 function Chat() {
+
+    const roomId = useSelector(selectRoomId);
+
     return (
         <ChatSection>
-            <Header>
-               <HeaderLeft>
-                  <h4> <strong> #Room-name </strong> </h4>
-                  <StarOutlineOutlinedIcon />
-               </HeaderLeft>
-               <HeaderRight>
-                  <p>
-                     <InfoOutlinedIcon /> Details
-                  </p>
-               </HeaderRight>
-            </Header>
+            <>
+                <Header>
+                <HeaderLeft>
+                    <h4> <strong> #Room-name </strong> </h4>
+                    <StarOutlineOutlinedIcon />
+                </HeaderLeft>
+                <HeaderRight>
+                    <p>
+                        <InfoOutlinedIcon /> Details
+                    </p>
+                </HeaderRight>
+                </Header>
+
+                <ChatMessages> {/* All messages*/} </ChatMessages>
+                
+                <ChatInput
+                    channelId= {roomId}
+                />
+            </>
         </ChatSection>
     )
 }
@@ -63,4 +77,7 @@ const HeaderRight = styled.div`
            margin-right: 5px;
        }
    }
+`;
+
+const ChatMessages = styled.div`
 `;

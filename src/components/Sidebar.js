@@ -70,7 +70,7 @@ const SidebarSection = styled.div`
    margin-top: 59px;
    border-top: 2px solid #49274b;
    max-width: 260px;
-   overflow: auto;
+   overflow-y: auto;
 
    > hr {
        border: 1px solid #49274b;
